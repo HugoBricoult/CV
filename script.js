@@ -1,5 +1,9 @@
 var indexpage = 0;
-
+var elem1 = document.getElementById("elem1").style;
+var elem2 = document.getElementById("elem2").style;
+var elem3 = document.getElementById("elem3").style;
+var elem4 = document.getElementById("elem4").style;
+var btn1 = document.getElementById("btn1").style;
 document.getElementById("btn2").addEventListener("click", down);
 document.getElementById("btn1").addEventListener("click", up);
 
@@ -35,50 +39,50 @@ function chooser() {
     }
 }
 
-function goatouts() { //elem3
-    document.getElementById("elem4").style.height = 0;
-    document.getElementById("elem4").style.paddingTop = 0;
-    document.getElementById("elem4").style.opacity = 0;
-    document.getElementById("elem2").style.height = 0;
-    document.getElementById("elem2").style.paddingTop = 0;
-    document.getElementById("elem2").style.opacity = 0;
-    document.getElementById("elem3").style.height = '65vh';
-    document.getElementById("elem3").style.paddingTop = '20vh';
-    document.getElementById("elem3").style.opacity = 1;
-}
-
-function goexp() { //elem4
-    document.getElementById("elem3").style.height = 0;
-    document.getElementById("elem3").style.paddingTop = 0;
-    document.getElementById("elem3").style.opacity = 0;
-    document.getElementById("elem4").style.height = '65vh';
-    document.getElementById("elem4").style.paddingTop = '20vh';
-    document.getElementById("elem4").style.opacity = 1;
-}
 
 function gointro() { //elem1
     indexpage = 0;
-    document.getElementById("elem2").style.opacity = 0;
-    document.getElementById("intro1").style.opacity = 1;
-    document.getElementById("intro2").style.opacity = 1;
-    document.getElementById("elem2").style.height = '0vh';
-    document.getElementById("elem2").style.paddingTop = '0vh';
-    document.getElementById("elem1").style.height = '89vh';
-    document.getElementById("btn1").style.opacity = 0;
-    document.getElementById("elem4").style.opacity = 0;
-    document.getElementById("elem4").style.height = '0vh';
-    document.getElementById("elem4").style.paddingTop = '0vh';
+    elem2.opacity = 0;
+    elem4.opacity = 0;
+    btn1.opacity = 0;
+    setTimeout(function() {
+        elem2.display = 'none';
+        elem4.display = 'none';
+        elem1.display = 'flex';
+        setTimeout(function() { elem1.opacity = 1; }, 20);
+    }, 500);
 }
 
 function gocomp() { //elem2
-    document.getElementById("intro1").style.opacity = 0;
-    document.getElementById("intro2").style.opacity = 0;
-    document.getElementById("elem2").style.opacity = 1;
-    document.getElementById("elem2").style.height = '70vh';
-    document.getElementById("elem2").style.paddingTop = '20vh';
-    document.getElementById("elem1").style.height = '0vh';
-    document.getElementById("btn1").style.opacity = 1;
-    document.getElementById("elem3").style.height = '0vh';
-    document.getElementById("elem3").style.paddingTop = '0vh';
-    document.getElementById("elem3").style.opacity = 0;
+    btn1.opacity = 1;
+    elem1.opacity = 0;
+    elem3.opacity = 0;
+    setTimeout(function() {
+        elem1.display = 'none';
+        elem3.display = "none";
+        elem2.display = 'flex';
+        setTimeout(function() { elem2.opacity = 1; }, 20);
+    }, 500);
+}
+
+function goatouts() { //elem3
+    elem2.opacity = 0;
+    elem4.opacity = 0;
+    setTimeout(function() {
+        elem2.display = 'none';
+        elem4.display = "none";
+        elem3.display = 'flex';
+        setTimeout(function() { elem3.opacity = 1; }, 20);
+    }, 500);
+}
+
+function goexp() { //elem4
+    elem1.opacity = 0;
+    elem3.opacity = 0;
+    setTimeout(function() {
+        elem1.display = 'none';
+        elem3.display = "none";
+        elem4.display = 'flex';
+        setTimeout(function() { elem4.opacity = 1; }, 20);
+    }, 500);
 }
