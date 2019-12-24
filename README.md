@@ -1,6 +1,6 @@
 # Création d'un CV
 
-Dans le cadre de la frmation Becode de charleroi, réalisation d'un CV sous forme de page WEB en Html et CSS.
+Dans le cadre de la formation Becode de charleroi, réalisation d'un CV sous forme de page WEB en Html et CSS.
 
 ### Contenu
 
